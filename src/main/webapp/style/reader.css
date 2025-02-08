@@ -1,0 +1,272 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to bottom, #0d1b2a, #1b263b);
+    color: #e0e1dd;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    color: #9bd1ff;
+    text-transform: uppercase;
+    margin-bottom: 0.5em;
+}
+
+a {
+    color: #9bd1ff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #e0e1dd;
+}
+
+/* Header */
+header {
+    background: #1b263b;
+    color: #e0e1dd;
+    padding: 1em 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+header h1 {
+    font-size: 2em;
+    margin: 0;
+    color: #9bd1ff;
+    white-space: nowrap;
+}
+
+header nav {
+    margin: 5px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2em;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    position: relative;
+}
+
+header nav ul li::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #9bd1ff;
+    transition: width 0.3s;
+}
+
+header nav ul li:hover::after {
+    width: 100%;
+}
+
+header .profile-actions {
+    display: flex;
+    gap: 1em;
+}
+
+header .btn {
+    padding: 0.5em 1em;
+    border: 1px solid #9bd1ff;
+    background: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+header .btn:hover {
+    background: #9bd1ff;
+    color: #1b263b;
+}
+
+/* Mobile Header */
+@media (max-width: 768px) {
+    header {
+        /*flex-wrap: wrap;*/
+        /*padding: 1em;*/
+        padding: 5px;
+    }
+
+    header h1 {
+        font-size: 1.2em;
+        text-align: center;
+        width: 90%;
+        margin-bottom: 0.5em;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 1em;
+        display: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    header nav ul.active {
+        display: flex;
+    }
+
+    header .menu-toggle {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        cursor: pointer;
+    }
+
+    header .menu-toggle span {
+        background: #9bd1ff;
+        height: 3px;
+        width: 25px;
+        margin: 5px 0;
+        display: block;
+        transition: 0.3s;
+    }
+
+    header .profile-actions {
+        justify-content: center;
+        width: 100%;
+        margin-top: 1em;
+    }
+}
+
+/* Reader Profile Section */
+.container {
+    padding: 2em 1em;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgba(27, 38, 59, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+.profile-info, .room-info, .book-list, .room-books {
+    margin-bottom: 2em;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    padding: 2em;
+    color: #e0e1dd;
+}
+
+h2 {
+    font-size: 2.2em;
+    color: #9bd1ff;
+    margin-bottom: 1.5em;
+}
+
+.info-card, .room-card, .table-container {
+    overflow: auto;
+    background: rgba(27, 38, 59, 0.8);
+    padding: 1.5em;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5em;
+}
+
+table th, table td {
+    padding: 1em;
+    border: 1px solid #9bd1ff;
+    text-align: center;
+}
+
+table th {
+    background-color: #1b263b;
+    color: #9bd1ff;
+}
+
+table td {
+    background-color: rgba(27, 38, 59, 0.7);
+}
+
+table tr:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.notification {
+    background: #ff9f00;
+    color: #1b263b;
+    padding: 1em;
+    margin: 1em 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Science Fiction Style */
+body {
+    background: url('/media/images/i.webp') repeat center center fixed;
+    background-size: cover;
+    color: #e0e1dd;
+}
+
+.notification {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.1em;
+    color: #ffffff;
+}
+
+.info-card p, .room-card p {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.1em;
+    color: #e0e1dd;
+}
+
+.profile-info, .room-info, .book-list, .room-books {
+    border: 1px solid #9bd1ff;
+}
+
+/* Button styles */
+.btn {
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* Footer */
+footer {
+    background: #1b263b;
+    color: #e0e1dd;
+    padding: 2em 1em;
+    text-align: center;
+}
+
+footer p {
+    margin: 0.5em 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1em;
+    }
+
+    .info-card p, .room-card p {
+        font-size: 1em;
+    }
+}

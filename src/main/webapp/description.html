@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System Overview</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+            margin: 0 auto;
+            max-width: 900px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        ul {
+            margin: 10px 0;
+            padding: 0 20px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Library Management System Overview</h1>
+</header>
+<main>
+    <section>
+        <h2>About the System</h2>
+        <p>
+            A software system designed for library employees. It ensures the storage of information about the books available in the library, its readers, and its reading rooms.
+        </p>
+    </section>
+
+    <section>
+        <h2>Books</h2>
+        <p>The database should store the following details for each book:</p>
+        <ul>
+            <li>Book title</li>
+            <li>Author(s)</li>
+            <li>Publisher</li>
+            <li>Year of publication</li>
+            <li>Number of copies of the book in each library room</li>
+            <li>Book code</li>
+            <li>Date the book was assigned to a reader</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Readers</h2>
+        <p>Information about library readers should include:</p>
+        <ul>
+            <li>Library card number</li>
+            <li>Reader’s last name</li>
+            <li>Passport number</li>
+            <li>Date of birth</li>
+            <li>Address</li>
+            <li>Phone number</li>
+            <li>Education level</li>
+            <li>Academic degree</li>
+        </ul>
+        <p>Readers are assigned to specific rooms and can register and unregister from the library.</p>
+    </section>
+
+    <section>
+        <h2>Reading Rooms</h2>
+        <p>Each room is characterized by:</p>
+        <ul>
+            <li>Room number</li>
+            <li>Name</li>
+            <li>Capacity (number of people who can simultaneously work in the room)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Library Operations</h2>
+        <p>The library can:</p>
+        <ul>
+            <li>Acquire new books and discard old ones.</li>
+            <li>Change a book's code due to reclassification.</li>
+            <li>Change a library card number due to re-registration.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Required Librarian Information</h2>
+        <p>Librarians may need the following information:</p>
+        <ul>
+            <li>Which books are assigned to a specific reader?</li>
+            <li>What is the title of the book with a given code?</li>
+            <li>What is the code of the book with a given title?</li>
+            <li>When was a book assigned to a reader?</li>
+            <li>Which readers borrowed books more than a month ago?</li>
+            <li>Which readers have been assigned books where the number of copies in the library does not exceed two?</li>
+            <li>How many readers are currently using the library?</li>
+            <li>How many library readers are under 20 years old?</li>
+            <li>What percentage of readers have primary, secondary, higher education, or an academic degree?</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Librarian Operations</h2>
+        <p>Librarians should be able to:</p>
+        <ul>
+            <li>Register a new reader in the library.</li>
+            <li>Remove readers from the list who registered in the library more than a year ago and have not re-registered.</li>
+            <li>Remove old or lost books.</li>
+            <li>Add a book to the library's collection.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Reports</h2>
+        <p>The system should provide the following reports:</p>
+        <ul>
+            <li>A report on the number of books by a specific author in a reading room.</li>
+            <li>A monthly report on library activity, including:
+                <ul>
+                    <li>The number of books and readers in each room and the library as a whole on the current day.</li>
+                    <li>The number of readers registered in the library during the reporting month.</li>
+                    <li>Which books were borrowed during the month and how many times.</li>
+                    <li>Readers who did not borrow any books.</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+</main>
+<footer>
+    <p>Library Management System &copy; 2024</p>
+</footer>
+</body>
+</html>

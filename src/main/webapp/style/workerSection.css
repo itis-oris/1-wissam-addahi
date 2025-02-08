@@ -1,0 +1,368 @@
+    /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5; /* Light gray */
+    color: #333; /* Text color */
+    line-height: 1.6;
+}
+
+/* Header Styling */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #0078d7; /* Blue */
+    color: white;
+    display: flex;
+    align-items: flex-start;
+    /*overflow: hidden;*/
+    justify-content: space-between;
+    padding: 2px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+.header label {
+    color: #333333;
+}
+
+.header .library-name {
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.header .nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.header .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s;
+}
+
+.header .nav-links a:hover {
+    color: #ffcc00;
+}
+
+/* Profile Section Inside Header */
+.profile {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 50px;
+    border: 2px solid #ff8c00;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ff8c00;
+    transition: transform 0.3s ease;
+}
+
+.profile:hover img {
+    transform: scale(1.1);
+}
+
+/* Expand Profile on Hover */
+.profile:hover {
+    padding: 15px;
+    background-color: #ffffff; /* White background */
+    border-radius: 15px;
+    border: 2px solid #0078d7;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 160px;
+    /*width: 300px; !* Expanded width *!*/
+    flex-direction: column;
+    align-items: flex-start;
+    transition: all 0.3s ease;
+}
+
+.profile .control {
+    display: none; /* Hidden initially */
+    margin-top: 10px;
+}
+
+.profile:hover .control {
+    display: block; /* Show on hover */
+}
+
+/* Control Section */
+.control h2, .control p {
+    font-size: 14px;
+    color: #333;
+    margin: 5px 0;
+}
+
+.control input {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.control input[type="button"],
+.control input[type="submit"] {
+    background-color: #0078d7;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.control input[type="button"]:hover,
+.control input[type="submit"]:hover {
+    background-color: #005bb5;
+}
+
+.control input[value="logout"] {
+    background-color: #dc3545;
+}
+
+.control input[value="logout"]:hover {
+    background-color: #c82333;
+}
+
+/* Main Content Styling */
+.main {
+    margin: 80px auto 50px auto; /* Adjusted for header */
+    padding: 20px;
+    max-width: 90%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 20px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#result, #response {
+    overflow: auto;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    min-height: 100px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .header .nav-links {
+        margin-top: 10px;
+    }
+
+    .profile {
+        margin-left: 0;
+    }
+
+    .main {
+        margin: 150px auto 50px auto;
+    }
+}
+
+.header .profile:hover ~ a {
+    display: none; /* Hides the nav links */
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+
+    .response form {
+        margin: auto;
+        background-color: #ffffff;
+        padding: 20px 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: 400px;
+        box-sizing: border-box;
+    }
+
+    /* Form Title */
+    .response form h1 {
+        margin: 0 0 20px 0;
+        font-size: 1.5rem;
+        text-align: center;
+        color: #333;
+    }
+
+    /* Form Labels */
+    .response form label {
+        font-size: 0.9rem;
+        color: #555;
+        margin-bottom: 5px;
+        display: block;
+    }
+
+    /* Form Inputs */
+    .response form input[type="text"],
+    .response form input[type="number"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-sizing: border-box;
+        font-size: 0.9rem;
+    }
+
+    /* Input Focus */
+    .response form input[type="text"]:focus,
+    .response form input[type="number"]:focus {
+        border-color: #007bff;
+        outline: none;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+    }
+
+    /* Submit Button */
+    .response form input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    /* Button Hover Effect */
+    .response form input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+
+    /* Form Container for Centering */
+    .response form-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 480px) {
+        .response form {
+            width: 100%;
+            margin: 0 20px;
+        }
+    }
+
+    /* General Table Styles */
+    .result table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        font-size: 1rem;
+        font-family: Arial, sans-serif;
+        background-color: #ffffff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Table Header */
+    .result table th {
+        background-color: #007bff;
+        color: #ffffff;
+        text-align: left;
+        padding: 10px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+    }
+
+    /* Table Rows */
+    .result table td {
+        padding: 10px;
+        border-bottom: 1px solid #dddddd;
+        color: #333333;
+    }
+
+    /* Alternate Row Coloring */
+    .result table tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+
+    /* Hover Effect */
+    .result table tr:hover {
+        background-color: #f1f5ff;
+        cursor: default;
+    }
+
+    /* Responsive Table for Small Screens */
+    @media (max-width: 768px) {
+        .result table {
+            border: 0;
+        }
+
+        .result table caption {
+            font-size: 1.3rem;
+        }
+
+        .result  table thead {
+            display: none;
+        }
+
+        .result table tr {
+            margin-bottom: 10px;
+            display: block;
+            border-bottom: 2px solid #dddddd;
+        }
+
+        .result table td {
+            display: block;
+            text-align: right;
+            font-size: 0.9rem;
+            border-bottom: 1px dotted #dddddd;
+        }
+
+        .result table td:last-child {
+            border-bottom: 0;
+        }
+
+        .result table td:before {
+            content: attr(data-label);
+            float: left;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+    }
